@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+  <style>
+    /* Add your CSS styling here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    button{
+    background-color: blue;
+    color;white;
+    }
+    .profile {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .profile img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile">
+    <h1>User Profile</h1>
+    <img src="profile-picture.jpg" alt="Profile Picture">
+    <p><strong>Name:</strong>Sathiya Priya.A</p>
+    <p><strong>Age:</strong>20</p>
+    <p><strong>College:</strong>Government Arts College</p>
+    <p><strong>Location:</strong>Karur</p>
+    <p><strong>Course:</strong>B.Sc Computer Science</p>
+    <p><strong>Address:</strong>Karur</p>
+    <button id="editBtn">Edit Profile</button>
+  </div>
+
+  <script>
+    // JavaScript for handling the edit button
+    document.getElementById("editBtn").addEventListener("click", function() {
+      var newName = prompt("Enter your name:");
+      var newAge = prompt("Enter your age:");
+      var newLocation = prompt("Enter your location:");
+
+      if (newName) {
+        document.querySelector(".profile h1").textContent = "Name: " + newName;
+      }
+      if (newAge) {
+        document.querySelectorAll(".profile p")[1].textContent = "Age: " + newAge;
+      }
+      if (newLocation) {
+        document.querySelectorAll(".profile p")[2].textContent = "Location: " + newLocation;
+      }
+    });
+  </script>
+</body>
+</html>
